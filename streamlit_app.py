@@ -47,6 +47,6 @@ fruit_choice = streamlit.text_input('What fruit would you like to add to the lis
 if fruit_choice != '':
   my_cur.execute(f"INSERT INTO fruit_load_list (fruit_name) VALUES ('{fruit_choice}')")
   
-  df = pd.DataFrame(data={'fruit_name': ['fruit_choice']})
+  df = pandas.DataFrame(data={'fruit_name': [f'{fruit_choice}']})
 
   table.add_rows(df)
